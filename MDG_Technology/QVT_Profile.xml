@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="1DA2B9DC-1" name="QVT" version="1.0" notes="QVT"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Association" notes="Assoziation zwischen den QVT-Objekten." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<Redefinitions>
+					<Redefine type="Association">
+						<Property name="direction" value="Unspecified"/>
+					</Redefine>
+				</Redefinitions>
+			</Stereotype>
+			<Stereotype name="import" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Note"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="metamodel" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Package"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="metaModelName"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="qvtRelation" notes="Der Rahmen einer QVT-Relation." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIACgF2TbQlJjPYwIAAAgOAAAHABEAc3RyLmRhdFVUDQAHMA9/RjAPf0YwD39G
+7VbbSuRAEK3X+BXD+KIieAHB3cUHEVEQfVgFH2UcdRTmoklUBvGL/IT9uT2nO0V3MknnIu7D
+IqEznU7VqapTJ92TyL0M5FFupScTzB5kKkvyhtHLrg1cY7yZy0yeJcU1z+z3MPpyjfVYbrAS
+4+mX55lgLZU7YI5xDWE3NrYrsi07uNYLv6s57w1Z854egLMix8gjkQvcR3jqY5VPM+TzG7GY
+ZYq1GWroA5XZpYj3jHd9oK96eH6Fkanxc9m+e3NmQrSu0bZl00Txf6ujrQHNPcXAHQJ5AA5G
+wLwFIlE4tnB3vxZxCflwMKd9dPFGzsHXNe6qC/J8hvnEsLiOcYDZFDFsx/OZ1XXsErj01n5E
+BW5CXqzN+RU9I1gz/8Tkn+TyV2WT5wlWB8Bi/qyJlVi1KD892c34sdyEsV+zippic2Y5a4Zs
+O9oNm74pkGNY6yq1E47blq0fBbaqkT/HVb4aWyHf2IqaKyevm+psv5qH7p1d7KvloDpi21r8
+PcLWw+Ew3WlRhahMa5ci+F7BagyvESz0/Bhm9u78cB6hXbJ6T1aG2uyDLma5jtqfNMTS+iP4
+xYatFL5Tg/iBOfH+GA9/D6V93RkRrl6/cXuGcubOJM2rTbTqE8mPZk8ixyRRm9Rdzs8yTp19
+OZVDzHzLUJee5AUIJ6hkXtsH2lvLn6Z//r5Zls0FsjmCrR8jn5nlwd45/K+lbuejfZOvhUq+
+E36vGjXUt7BKnDrK2eyu+TbaCueo2vq3+u2yeyxqxnW9TumqLf135OsqpKfQCUKPb0Ut5vg/
+KEr/z1RbFjVFjzJV2fu7/AVQSwECFwsUAAAACAAoBdk20JSYz2MCAAAIDgAABwAJAAAAAAAA
+AAAAAIAAAAAAc3RyLmRhdFVUBQAHMA9/RlBLBQYAAAAAAQABAD4AAACZAgAAAAA=</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="isTopRelation" type="boolean" description="" unit="" values="true,false" default="false"/>
+					<Tag name="qvtKey" type="" description="" unit="" values="" default=""/>
+					<Tag name="When" type="" description="" unit="" values="" default=""/>
+					<Tag name="Where" type="" description="" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="qvtTransformation" notes="Eine QVT-Transformation." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Component">
+						<Property name="isIndirectlyInstantiated" value="true"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="qvtTransformationLink" notes="Verbindung zwischen dem Relationsknoten und dem Doaminelement." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC6POzUFww75IgEAAAgDAAAHABEAc3RyLmRhdFVUDQAHg7saRYO7GkWDuxpF
+lZHRSsNAEEXva/IVS/tiQVBfFR+qFiu0RdQfqGajYpOWJiqh9N89u5tggrYiy05mMnPvnZkt
+9KK5VrIyyvBelSvWhmvqk2upe1+V4H3qXKXWegdxRlWkAq/UwiMtUamKyOpAPV1pCHaMN6ir
+Mzg+PGJJxbEOuU2u4Qi5EzLdfKwtN9YRJ3QU+p6CSzhO9QHsShNyj0SLunpTI9uoCTZF6wJE
+6TWzDs7twGlGsKf0MyZXwD/Xs5/tUiOiyrP16NNgn+C32DfYclgqP/nAswS+SLe6041mYAPL
+926CWrCu3/8oW/RSVNeou7/7VUct1aDU7HbXXvdvqcve5zvUtU79aye+cgYmw+u3lH+fzlWV
+RNMf2L+mMiiajvoupnYXbu6tvgBQSwECFwsUAAAACAAujzs1BcMO+SIBAAAIAwAABwAJAAAA
+AAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHg7saRVBLBQYAAAAAAQABAD4AAABYAQAAAAA=</Image>
+				<AppliesTo>
+					<Apply type="Association">
+						<Property name="direction" value="Source -&gt; Destination"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="CEType" type="enumeration" description="" unit="" values="checkonly,enforce" default=""/>
+					<Tag name="modelName" type="string" description="" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="qvtTransformationNode" notes="Der sechseckige QVT-Relationsknoten." cx="100" cy="50" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAMaEODaSN7M4GQIAACAGAAAHABEAc3RyLmRhdFVUDQAHi4u3RYuLt0WLi7dF
+lVTLThtBEKyr8xUjcwEJCYOClAhxMAjEgUAEVq6RscE2Xtto/SARyr+nqtu93rWwSTTa2XlU
+d9dU98wUfbTxgkckjDgaYIw3fMI1x78xwRwztDhyxCm/Os64nqPLlZyzE6JrOGC7M/yYO3fc
+69ByFw3s23fIfv3v/Z55kI8prWYWaYxXMuly1qePwwpmRma54drLfe0mY5BwX+wnfhPrc650
+jL+fJ3GeCnt5rZX6EVELYzJZ8j8uWDoiM5UCcWSYtBXz5R8woUz6IJ77cvRmVLD6CNcgZj2m
+9O9u0DfhwnZXuspbb4u2ntUn4jK2DnGZ1Y84HrPtr/2DRVi0LZ7yntNuSG/vM7tc4sWsb9le
+ZV58wypZbfkokBErlfiFXtV6OCLPzyWWil1V9CszVMW876V81k1eyhj5CWyTJ+qy1ud4YB83
+eJe38YbjEcd1WtdxbrmcwW9qmY+8tLj+y3IWVrHzVoxq+IGfjCd2PfqKN6DqeXWKGq7+E/+d
+Kzq5Xos6dsiliW+ssp0SYyH/VLgPmLNEiysyn/IkbUaTfcu89dg8klS4Nv9D87dX1Mst1zK+
+bIlKqk5eOXKvURUTqvsMf8mSqTyF17feGI+hylpwljEXsqnGPy1ipyX7VCisFc18fmt2rpHq
+dMDoK/VuqIer5hZRD24rVZVHnb/JPL6Y+qrp0MDfAb/nZU1zqN7m/I9tVf5da7GT4n8BUEsB
+AhcLFAAAAAgAxoQ4NpI3szgZAgAAIAYAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUA
+B4uLt0VQSwUGAAAAAAEAAQA+AAAATwIAAAAA</Image>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="set" notes="Darstellung eines QVT-Set." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAACdODa1jci3GwEAAHoDAAAHABEAc3RyLmRhdFVUDQAHQLa3RUC2t0VAtrdF
+jZLPTsJAEMa/q32Kpl5qYiIe1XgwBhMT9aAPYKpUIJTSlMrF+O7+ZpcWWqGQyczszp9vd7/Z
+pSZKVChVqDmrqXIF+kFPVBL9VEU011gZu1gDnevS2atmPdCZblzH0lWX2AJfgR03ubkWWoFR
+4UPiHsVsXZG5031Fne/LHpO3W+6u8Pc/lN++X0p2tONlX/RliPE0chyUIMyo/19rmlBldd/6
+wNb8x4roT+DJWF/grdu4tEiOjxq+27yHa/ET2MyzHy3Y6vRiU+/GujLROzjG1BiUULdoxAke
+M+WEaP1SE9+zOrKne1ZbDuUvkH0/dsNYm7l+zAI8+xEVSLmbz6ledKdnDVldo/d6Yv+GPOoB
+HeqVaLQH/dfFvA30B1BLAQIXCxQAAAAIAACdODa1jci3GwEAAHoDAAAHAAkAAAAAAAAAAAAA
+gAAAAABzdHIuZGF0VVQFAAdAtrdFUEsFBgAAAAABAAEAPgAAAFEBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Object"/>
+				</AppliesTo>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes>
+			<TaggedValueType property="metaModelName" description="" notes="Type=Classifier;Stereotypes=qvtTransformationLink;"/>
+		</TaggedValueTypes>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>

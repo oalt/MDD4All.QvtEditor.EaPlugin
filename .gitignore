@@ -396,3 +396,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/src/MDD4All.QvtEditor.EaPlugin/_registry/MDD4All.QvtEditor.EaPlugin.reg
