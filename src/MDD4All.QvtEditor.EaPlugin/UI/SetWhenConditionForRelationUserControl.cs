@@ -71,13 +71,20 @@ namespace MDD4All.QvtEditor.EaPlugin.UI
                 }
             }
 
-            EA.Collection elements = package.Elements;
-            for (int i = 0; i < elements.Count; i++)
+            EA.Element relationParent = repository.GetElementByID(_currentRelationElement.ParentID);
+
+            if (relationParent != null)
             {
-                EA.Element ele = (EA.Element)elements.GetAt((short)i);
-                if (ele.Stereotype.Equals("qvtRelation"))
+
+
+                EA.Collection elements = relationParent.Elements;
+                for (int i = 0; i < elements.Count; i++)
                 {
-                    _qvtRelationElements.Add(ele);
+                    EA.Element ele = (EA.Element)elements.GetAt((short)i);
+                    if (ele.Stereotype.Equals("qvtRelation"))
+                    {
+                        _qvtRelationElements.Add(ele);
+                    }
                 }
             }
 

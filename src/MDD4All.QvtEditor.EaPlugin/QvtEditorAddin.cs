@@ -10,7 +10,7 @@ namespace MDD4All.QvtEditor.EaPlugin
     public class QvtEditorAddin
     {
         //private static readonly ILog log = LogManager.GetLogger(typeof(QVTEditorAddin));
-        
+
         private ConnectorDescriptor _connectorData = null;
         private QvtTransformationTaggedValues _data;
         private List<EA.Attribute> _attributes = new List<EA.Attribute>();
@@ -93,6 +93,8 @@ namespace MDD4All.QvtEditor.EaPlugin
         /// <returns></returns>
         public bool EA_OnPostNewConnector(EA.Repository repository, EA.EventProperties info)
         {
+            bool result = true;
+
             EA.EventProperty prop = info.Get(0);
             EA.Connector connector = repository.GetConnectorByID(int.Parse((string)prop.Value));
             EA.Element clientElement = repository.GetElementByID(connector.ClientID);
@@ -102,102 +104,104 @@ namespace MDD4All.QvtEditor.EaPlugin
             EA.ConnectorEnd AssociationClient = connector.ClientEnd;
             EA.ConnectorEnd AssociationSupplier = connector.SupplierEnd;
 
-            if (CalculateTransformationLinkOrderNumber(currentdia, repository).Equals(1))
+            string connectorStereotype = connector.Stereotype;
+            string connectorType = connector.Type;
+
+            if (IsQvtRelationDiagram(currentdia, repository))
             {
-                string ConnectorType = connector.Stereotype;
 
-                switch (ConnectorType)
+                if (connectorStereotype == "qvtTransformationLink")
                 {
-                    case ("qvtTransformationLink"):
+                    if (_connectorData.ClientID.Equals(_connectorData.SupplierID))
+                    {
+                        result = false;
+                    }
+                    else
+                    {
+                        if (!supplierElement.Stereotype.Equals("domain"))
                         {
-                            if (_connectorData.ClientID.Equals(_connectorData.SupplierID))
-                            {
-                                return false;
-                            }
-                            if (!supplierElement.Stereotype.Equals("domain"))
-                            {
-                                supplierElement.Stereotype = "domain";
-                                supplierElement.Update();
-                            }
-                            _data = new QvtTransformationTaggedValues();
-                            EA.Element domainElement = repository.GetElementByID(int.Parse(_connectorData.SupplierID));
-                            domainElement.Stereotype = "domain";
-                            domainElement.Update();
-                            QvtTransformationLinkDialog qvtTransformationLinkDialog = new QvtTransformationLinkDialog(_data, repository);
-                            qvtTransformationLinkDialog.ShowDialog();
-
-                            for (int i = 0; i < connector.TaggedValues.Count; i++)
-                            {
-                                EA.ConnectorTag tag = (EA.ConnectorTag)connector.TaggedValues.GetAt((short)i);
-                                if (tag.Name.Equals("CEType"))
-                                {
-                                    tag.Value = _data.CEType;
-                                    tag.Update();
-                                }
-                                if (tag.Name.Equals("modelName"))
-                                {
-                                    tag.Value = _data.ModelName;
-                                    tag.Update();
-                                }
-                                if (tag.Name.Equals("metaModelName"))
-                                {
-                                    tag.Value = _data.MetaName;
-                                    tag.Update();
-                                }
-                            }
-                            connector.Name = AddOrder(repository, currentdia).ToString();
-                            connector.Update();
-                            currentdia.Update();
-                            repository.RefreshOpenDiagrams(false);
-
+                            supplierElement.Stereotype = "domain";
+                            supplierElement.Update();
                         }
-                        break;
+                        _data = new QvtTransformationTaggedValues();
+                        EA.Element domainElement = repository.GetElementByID(int.Parse(_connectorData.SupplierID));
+                        domainElement.Stereotype = "domain";
+                        domainElement.Update();
+                        QvtTransformationLinkDialog qvtTransformationLinkDialog = new QvtTransformationLinkDialog(_data, repository);
+                        qvtTransformationLinkDialog.ShowDialog();
 
-                    case (""):
+
+
+                        for (int i = 0; i < connector.TaggedValues.Count; i++)
                         {
-                            if (_connectorData.ClientID.Equals(_connectorData.SupplierID))
+                            EA.ConnectorTag tag = (EA.ConnectorTag)connector.TaggedValues.GetAt((short)i);
+                            if (tag.Name.Equals("CEType"))
                             {
-                                return false;
+                                tag.Value = _data.CEType;
+                                tag.Update();
                             }
-                            if (clientElement.Type == "Object" && supplierElement.Type == "Object" && connector.Type == "Association")
+                            if (tag.Name.Equals("modelName"))
                             {
-                                EA.Element clientMetaClass = repository.GetElementByID(clientElement.ClassifierID);
-                                EA.Element supplierMetaClass = repository.GetElementByID(supplierElement.ClassifierID);
-                                MetaModelReference EAmodel = new MetaModelReference(repository, clientMetaClass, supplierMetaClass);
-                                if (EAmodel.connectorList.Count == 1)
-                                {
-                                    SetConnectorRoles(EAmodel.connectorList[0], clientMetaClass, connector);
-                                }
-                                else if (EAmodel.connectorList.Count == 0)
-                                {
-                                    return false;
-                                }
-                                else
-                                {
-                                    AssociationMessageDialog associationMessageDialog = new AssociationMessageDialog(repository, EAmodel.connectorList, connector);
-                                    associationMessageDialog.ShowDialog();
-                                    if (associationMessageDialog.SelectedConnector != null)
-                                    {
-                                        SetConnectorRoles(associationMessageDialog.SelectedConnector, clientMetaClass, connector);
-                                    }
-                                    else
-                                    {
-                                        return false;
-                                    }
-                                }
+                                tag.Value = _data.ModelName;
+                                tag.Update();
+                            }
+                            if (tag.Name.Equals("metaModelName"))
+                            {
+                                tag.Value = _data.MetaName;
+                                tag.Update();
+                            }
+                        }
+                        connector.Name = AddOrder(repository, currentdia).ToString();
+                        connector.Update();
+                        currentdia.Update();
+                        repository.RefreshOpenDiagrams(false);
+                    }
+                }
+                else
+                {
+                    if (_connectorData.ClientID.Equals(_connectorData.SupplierID))
+                    {
+                        result = false;
+                    }
+                    else
+                    {
+                        if (clientElement.Type == "Object" && supplierElement.Type == "Object" && connector.Type == "Association")
+                        {
+                            EA.Element clientMetaClass = repository.GetElementByID(clientElement.ClassifierID);
+                            EA.Element supplierMetaClass = repository.GetElementByID(supplierElement.ClassifierID);
+                            MetaModelReference EAmodel = new MetaModelReference(repository, clientMetaClass, supplierMetaClass);
+                            if (EAmodel.connectorList.Count == 1)
+                            {
+                                SetConnectorRoles(EAmodel.connectorList[0], clientMetaClass, connector);
+                            }
+                            else if (EAmodel.connectorList.Count == 0)
+                            {
+                                result = false;
                             }
                             else
                             {
-                                return false;
+                                AssociationMessageDialog associationMessageDialog = new AssociationMessageDialog(repository, EAmodel.connectorList, connector);
+                                associationMessageDialog.ShowDialog();
+                                if (associationMessageDialog.SelectedConnector != null)
+                                {
+                                    SetConnectorRoles(associationMessageDialog.SelectedConnector, clientMetaClass, connector);
+                                }
+                                else
+                                {
+                                    result = false;
+                                }
                             }
-                            break;
                         }
-                }
-                repository.RefreshOpenDiagrams(true);
-                //Repository.ReloadDiagram((int)currentdia.DiagramID);
+                        else
+                        {
+                            result = false;
+                        }
+                    }
 
+                }
             }
-            return true;
+            
+            return result;
         }
 
         public bool EA_OnContextItemDoubleClicked(EA.Repository repository, string guid, EA.ObjectType objectType)
@@ -205,7 +209,7 @@ namespace MDD4All.QvtEditor.EaPlugin
             bool result = false;
 
             EA.Diagram currentdia = repository.GetCurrentDiagram();
-            
+
             if (objectType.ToString().Equals("otElement"))
             {
                 EA.Element ClickedElement = repository.GetElementByGuid(guid);
@@ -394,6 +398,23 @@ namespace MDD4All.QvtEditor.EaPlugin
                 }
             }
             return symbol;
+        }
+
+        private bool IsQvtRelationDiagram(EA.Diagram currentDiagram, EA.Repository repository)
+        {
+            bool result = false;
+            EA.Collection elements = currentDiagram.DiagramObjects;
+            for (int i = 0; i < elements.Count; i++)
+            {
+                EA.DiagramObject diagramObject = (EA.DiagramObject)elements.GetAt((short)i);
+                EA.Element element = repository.GetElementByID(diagramObject.ElementID);
+                if (element.Stereotype.Equals("qvtTransformationNode"))
+                {
+                    result = true;
+                    break;
+                }
+            }
+            return result;
         }
 
     }
