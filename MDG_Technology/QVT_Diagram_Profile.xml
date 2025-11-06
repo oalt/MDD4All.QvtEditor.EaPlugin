@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="6495F071-8" name="QVT" version="1.0" notes="QVT"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="QVT Diagram" notes="">
+				<AppliesTo>
+					<Apply type="Diagram_Object">
+						<Property name="alias" value="QVT"/>
+						<Property name="diagramID" value="qvt"/>
+						<Property name="toolbox" value="QVT Toolbox Profile"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>

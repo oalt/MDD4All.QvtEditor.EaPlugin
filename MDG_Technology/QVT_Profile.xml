@@ -3,27 +3,27 @@
 	<Documentation id="1DA2B9DC-1" name="QVT" version="1.0" notes="QVT"/>
 	<Content>
 		<Stereotypes>
-			<Stereotype name="Association" notes="Assoziation zwischen den QVT-Objekten." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<Redefinitions>
-					<Redefine type="Association">
+			<Stereotype name="Association" notes="Assoziation zwischen den QVT-Objekten." cx="0" cy="0">
+				<AppliesTo>
+					<Apply type="Association">
 						<Property name="direction" value="Unspecified"/>
-					</Redefine>
-				</Redefinitions>
+					</Apply>
+				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="import" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="import" notes="" cx="0" cy="0">
 				<AppliesTo>
 					<Apply type="Note"/>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="metamodel" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="metamodel" notes="" cx="0" cy="0">
 				<AppliesTo>
 					<Apply type="Package"/>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="metaModelName"/>
+					<Tag name="Namespace" type="string" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="qvtRelation" notes="Der Rahmen einer QVT-Relation." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="qvtRelation" notes="Der Rahmen einer QVT-Relation." cx="0" cy="0">
 				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIACgF2TbQlJjPYwIAAAgOAAAHABEAc3RyLmRhdFVUDQAHMA9/RjAPf0YwD39G
 7VbbSuRAEK3X+BXD+KIieAHB3cUHEVEQfVgFH2UcdRTmoklUBvGL/IT9uT2nO0V3MknnIu7D
 IqEznU7VqapTJ92TyL0M5FFupScTzB5kKkvyhtHLrg1cY7yZy0yeJcU1z+z3MPpyjfVYbrAS
@@ -50,14 +50,14 @@ AAAAAIAAAAAAc3RyLmRhdFVUBQAHMA9/RlBLBQYAAAAAAQABAD4AAACZAgAAAAA=</Image>
 					<Tag name="Where" type="" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="qvtTransformation" notes="Eine QVT-Transformation." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="qvtTransformation" notes="Eine QVT-Transformation." cx="0" cy="0">
 				<AppliesTo>
 					<Apply type="Component">
 						<Property name="isIndirectlyInstantiated" value="true"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="qvtTransformationLink" notes="Verbindung zwischen dem Relationsknoten und dem Doaminelement." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="qvtTransformationLink" notes="Verbindung zwischen dem Relationsknoten und dem Doaminelement." cx="0" cy="0">
 				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAC6POzUFww75IgEAAAgDAAAHABEAc3RyLmRhdFVUDQAHg7saRYO7GkWDuxpF
 lZHRSsNAEEXva/IVS/tiQVBfFR+qFiu0RdQfqGajYpOWJiqh9N89u5tggrYiy05mMnPvnZkt
 9KK5VrIyyvBelSvWhmvqk2upe1+V4H3qXKXWegdxRlWkAq/UwiMtUamKyOpAPV1pCHaMN6ir
@@ -74,9 +74,10 @@ AAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHg7saRVBLBQYAAAAAAQABAD4AAABYAQAAAAA=</Image>
 				<TaggedValues>
 					<Tag name="CEType" type="enumeration" description="" unit="" values="checkonly,enforce" default=""/>
 					<Tag name="modelName" type="string" description="" unit="" values="" default=""/>
+					<Tag name="metaModelName"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="qvtTransformationNode" notes="Der sechseckige QVT-Relationsknoten." cx="100" cy="50" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="qvtTransformationNode" notes="Der sechseckige QVT-Relationsknoten." cx="100" cy="50">
 				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAMaEODaSN7M4GQIAACAGAAAHABEAc3RyLmRhdFVUDQAHi4u3RYuLt0WLi7dF
 lVTLThtBEKyr8xUjcwEJCYOClAhxMAjEgUAEVq6RscE2Xtto/SARyr+nqtu93rWwSTTa2XlU
 d9dU98wUfbTxgkckjDgaYIw3fMI1x78xwRwztDhyxCm/Os64nqPLlZyzE6JrOGC7M/yYO3fc
@@ -96,7 +97,7 @@ B4uLt0VQSwUGAAAAAAEAAQA+AAAATwIAAAAA</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="set" notes="Darstellung eines QVT-Set." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="set" notes="Darstellung eines QVT-Set." cx="0" cy="0">
 				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAACdODa1jci3GwEAAHoDAAAHABEAc3RyLmRhdFVUDQAHQLa3RUC2t0VAtrdF
 jZLPTsJAEMa/q32Kpl5qYiIe1XgwBhMT9aAPYKpUIJTSlMrF+O7+ZpcWWqGQyczszp9vd7/Z
 pSZKVChVqDmrqXIF+kFPVBL9VEU011gZu1gDnevS2atmPdCZblzH0lWX2AJfgR03ubkWWoFR
@@ -111,7 +112,7 @@ gAAAAABzdHIuZGF0VVQFAAdAtrdFUEsFBgAAAAABAAEAPgAAAFEBAAAAAA==</Image>
 			</Stereotype>
 		</Stereotypes>
 		<TaggedValueTypes>
-			<TaggedValueType property="metaModelName" description="" notes="Type=Classifier;Stereotypes=qvtTransformationLink;"/>
+			<TaggedValueType property="metaModelName" description="" notes="Type=RefGUID;Stereotypes=metamodel;"/>
 		</TaggedValueTypes>
 		<ViewDefinitions/>
 		<Metamodel/>
