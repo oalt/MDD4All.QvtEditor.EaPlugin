@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1252"?>
-<MDG.Technology version="1.0"><Documentation id="QVT" name="QVT" version="1.0" notes="QVT Editor Technology"/><UMLProfiles><UMLProfile profiletype="uml2">
-			<Documentation id="1DA2B9DC-1" name="QVT" version="1.0" notes="QVT"/>
+<MDG.Technology version="1.0"><Documentation id="QVT" name="QVT" version="1.1" notes="QVT Editor Technology"/><UMLProfiles><UMLProfile profiletype="uml2">
+			<Documentation id="1DA2B9DC-1" name="QVT" version="1.1" notes="QVT"/>
 			<Content>
 				<Stereotypes>
 					<Stereotype name="Association" notes="Assoziation zwischen den QVT-Objekten." cx="0" cy="0">
@@ -20,7 +20,10 @@
 							<Apply type="Package"/>
 						</AppliesTo>
 						<TaggedValues>
+							<Tag name="Name" type="string" description="" unit="" values="" default=""/>
 							<Tag name="Namespace" type="string" description="" unit="" values="" default=""/>
+							<Tag name="ReferenceType" type="enumeration" description="" unit="" values="Package,Project,File" default=""/>
+							<Tag name="Version" type="string" description="" unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="qvtRelation" notes="Der Rahmen einer QVT-Relation." cx="0" cy="0">
