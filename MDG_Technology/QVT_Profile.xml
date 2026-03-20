@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1252"?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="1DA2B9DC-1" name="QVT" version="1.1" notes="QVT"/>
+	<Documentation id="1DA2B9DC-1" name="QVT" version="1.2" notes="QVT"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Association" notes="Assoziation zwischen den QVT-Objekten." cx="0" cy="0">
@@ -10,18 +10,31 @@
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
+			<Stereotype name="datamodels" notes="" cx="0" cy="0">
+				<AppliesTo>
+					<Apply type="Package"/>
+				</AppliesTo>
+			</Stereotype>
 			<Stereotype name="import" notes="" cx="0" cy="0">
 				<AppliesTo>
 					<Apply type="Note"/>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="metamodel" notes="" cx="0" cy="0">
+			<Stereotype name="metamodelRelation" notes="Verbindung zwischen der Transformation und dem Metamodell-Paket" cx="0" cy="0">
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIADZAdFxiXWE+pAAAABgBAAAHABEAc3RyLmRhdFVUDQAHx/68acf+vGnH/rxp
+VY/BCsJADETftf2KohcFD3pVPFQEFVRE/YFKFxS6rdhVEem/O922BwlhJ8lMMltyJeGOIcIK
+3cgJ+SqjNnIKTp6VCr2Z43jwlGImVkAp5Mi80qhyfFQZBvRYEku7Fhq2bKsdL68oxBgzUnaz
+bkczm2jyPw+plHU0fhrXO6lSRX1zIaXzestWjIt6WfufgANHNuw5e299vTErprqZiG/U6XxW
+/ABQSwECFwsUAAAACAA2QHRcYl1hPqQAAAAYAQAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRh
+dFVUBQAHx/68aVBLBQYAAAAAAQABAD4AAADaAAAAAAA=</Image>
 				<AppliesTo>
-					<Apply type="Package"/>
+					<Apply type="Association">
+						<Property name="compositionKind" value="none"/>
+						<Property name="direction" value="Source -&gt; Destination"/>
+					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="Name" type="string" description="" unit="" values="" default=""/>
-					<Tag name="Namespace" type="string" description="" unit="" values="" default=""/>
+					<Tag name="name" type="string" description="" unit="" values="" default=""/>
 					<Tag name="ReferenceType" type="enumeration" description="" unit="" values="Package,Project,File" default=""/>
 					<Tag name="Version" type="string" description="" unit="" values="" default=""/>
 				</TaggedValues>
@@ -77,7 +90,7 @@ AAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHg7saRVBLBQYAAAAAAQABAD4AAABYAQAAAAA=</Image>
 				<TaggedValues>
 					<Tag name="CEType" type="enumeration" description="" unit="" values="checkonly,enforce" default=""/>
 					<Tag name="modelName" type="string" description="" unit="" values="" default=""/>
-					<Tag name="metaModelName"/>
+					<Tag name="metaModelName" type="string" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="qvtTransformationNode" notes="Der sechseckige QVT-Relationsknoten." cx="100" cy="50">
@@ -114,9 +127,7 @@ gAAAAABzdHIuZGF0VVQFAAdAtrdFUEsFBgAAAAABAAEAPgAAAFEBAAAAAA==</Image>
 				</AppliesTo>
 			</Stereotype>
 		</Stereotypes>
-		<TaggedValueTypes>
-			<TaggedValueType property="metaModelName" description="" notes="Type=RefGUID;Stereotypes=metamodel;"/>
-		</TaggedValueTypes>
+		<TaggedValueTypes/>
 		<ViewDefinitions/>
 		<Metamodel/>
 	</Content>

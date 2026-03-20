@@ -127,7 +127,7 @@ namespace MDD4All.QvtEditor.EaPlugin
                         EA.Element domainElement = repository.GetElementByID(int.Parse(_connectorData.SupplierID));
                         domainElement.Stereotype = "domain";
                         domainElement.Update();
-                        QvtTransformationLinkDialog qvtTransformationLinkDialog = new QvtTransformationLinkDialog(_data, repository);
+                        QvtTransformationLinkDialog qvtTransformationLinkDialog = new QvtTransformationLinkDialog(_data, repository, connector);
                         qvtTransformationLinkDialog.ShowDialog();
 
 

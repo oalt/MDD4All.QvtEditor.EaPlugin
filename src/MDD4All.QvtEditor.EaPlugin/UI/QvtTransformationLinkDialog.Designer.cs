@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.checkRadioButton = new System.Windows.Forms.RadioButton();
             this.enforceRadioButton = new System.Windows.Forms.RadioButton();
             this.metaModelComboBox = new System.Windows.Forms.ComboBox();
-            this.modelComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label2
@@ -47,18 +45,9 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Please choose the Metamodel";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Please choose the Model";
-            // 
             // okButton
             // 
-            this.okButton.Location = new System.Drawing.Point(15, 183);
+            this.okButton.Location = new System.Drawing.Point(15, 115);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(53, 23);
             this.okButton.TabIndex = 7;
@@ -68,7 +57,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(106, 183);
+            this.cancelButton.Location = new System.Drawing.Point(84, 115);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(56, 23);
             this.cancelButton.TabIndex = 8;
@@ -79,7 +68,7 @@
             // checkRadioButton
             // 
             this.checkRadioButton.AutoSize = true;
-            this.checkRadioButton.Location = new System.Drawing.Point(15, 147);
+            this.checkRadioButton.Location = new System.Drawing.Point(15, 79);
             this.checkRadioButton.Name = "checkRadioButton";
             this.checkRadioButton.Size = new System.Drawing.Size(74, 17);
             this.checkRadioButton.TabIndex = 9;
@@ -90,7 +79,7 @@
             // enforceRadioButton
             // 
             this.enforceRadioButton.AutoSize = true;
-            this.enforceRadioButton.Location = new System.Drawing.Point(106, 147);
+            this.enforceRadioButton.Location = new System.Drawing.Point(106, 79);
             this.enforceRadioButton.Name = "enforceRadioButton";
             this.enforceRadioButton.Size = new System.Drawing.Size(61, 17);
             this.enforceRadioButton.TabIndex = 10;
@@ -103,34 +92,24 @@
             this.metaModelComboBox.FormattingEnabled = true;
             this.metaModelComboBox.Location = new System.Drawing.Point(15, 39);
             this.metaModelComboBox.Name = "metaModelComboBox";
-            this.metaModelComboBox.Size = new System.Drawing.Size(147, 21);
+            this.metaModelComboBox.Size = new System.Drawing.Size(231, 21);
             this.metaModelComboBox.TabIndex = 11;
-            // 
-            // modelComboBox
-            // 
-            this.modelComboBox.FormattingEnabled = true;
-            this.modelComboBox.Location = new System.Drawing.Point(15, 109);
-            this.modelComboBox.Name = "modelComboBox";
-            this.modelComboBox.Size = new System.Drawing.Size(147, 21);
-            this.modelComboBox.TabIndex = 12;
             // 
             // QvtTransformationLinkDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(176, 232);
+            this.ClientSize = new System.Drawing.Size(258, 154);
             this.ControlBox = false;
-            this.Controls.Add(this.modelComboBox);
             this.Controls.Add(this.metaModelComboBox);
             this.Controls.Add(this.enforceRadioButton);
             this.Controls.Add(this.checkRadioButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "QvtTransformationLinkDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "QVT Relation Link";
+            this.Text = "QVT Transformation Link";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,12 +118,10 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.RadioButton checkRadioButton;
         private System.Windows.Forms.RadioButton enforceRadioButton;
         private System.Windows.Forms.ComboBox metaModelComboBox;
-        private System.Windows.Forms.ComboBox modelComboBox;
     }
 }
