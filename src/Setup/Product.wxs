@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?define ReleasePath = "..\MDD4All.QvtEditor.EaPlugin\bin\Release" ?>
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+
+  <Package Scope="perUser"
+      Name="QVT Editor"
+      Manufacturer="MDD4All.de"
+      Version="$(var.ProductVersion)"
+      UpgradeCode="{58811A75-798A-45E9-9605-F755A0CD0D32}">
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of QVT Editor is already installed." />
+    <Media Id="1" Cabinet="QVTEditor.cab" EmbedCab="yes" />
+
+    <StandardDirectory Id="CommonAppDataFolder">
+      <Directory Id="VendorFolder" Name="MDD4All.de">
+        <Directory Id="PRODUCTFOLDER" Name="QVTEditor">
+          <!-- INSTALLDIR must match the CodeBase paths in ComRegistration.wxi -->
+          <Directory Id="INSTALLDIR" Name="bin" />
+        </Directory>
+      </Directory>
+    </StandardDirectory>
+
+    <Feature Id="MainFeature" Title="QVT Editor Setup" Level="1">
+      <ComponentGroupRef Id="AddinFiles" />
+      <ComponentRef Id="Cmp_ComRegistration" />
+      <ComponentRef Id="RegisterAddin" />
+    </Feature>
+
+  </Package>
+
+  <Fragment>
+
+    <ComponentGroup Id="AddinFiles" Directory="INSTALLDIR">
+
+        <!-- WiX v4+ glob-harvests the whole Release output; no heat.exe needed -->
+        <Files Include="$(var.ReleasePath)\**">
+            <Exclude Files="$(var.ReleasePath)\**\*.pdb;$(var.ReleasePath)\**\*.xml;$(var.ReleasePath)\**\*.reg;" />
+        </Files>
+
+        <!--
+          EA-specific registration: this is what EA itself reads at startup
+          to discover the addin. Separate from — and just as required as —
+          the COM registration in ComRegistration.wxi.
+        -->
+        <Component Id="RegisterAddin" Guid="{B24D1288-AAA9-44DB-AA11-AE0E647FAB56}">
+            <RegistryKey Root="HKCU" Key="Software\Sparx Systems\EAAddins\QVT Editor">
+                <RegistryValue Value="MDD4All.QvtEditor.EaPlugin.QvtEditorAddin" Type="string" />
+            </RegistryKey>
+        </Component>
+
+        <?include ComRegistration.wxi ?>
+
+    </ComponentGroup>
+
+  </Fragment>
+
+</Wix>

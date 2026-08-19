@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Per-user COM registration for the QVT Editor EA addin.
+  Generated from: regasm.exe MDD4All.QvtEditor.EaPlugin.dll /regfile /codebase
+  (HKEY_CLASSES_ROOT -> HKEY_CURRENT_USER\Software\Classes,
+   Classes\CLSID -> Classes\WOW6432Node\CLSID)
+
+  Registers every COM-visible class regasm found in the assembly
+  (assembly-level [ComVisible(true)], no per-class exclusions):
+    1. MDD4All.QvtEditor.EaPlugin.QvtEditorAddin (EA entry point)
+    2. MDD4All.QvtEditor.EaPlugin.DataModels.ConnectorListModel
+    3. MDD4All.QvtEditor.EaPlugin.DataModels.QvtTransformationTaggedValues
+    4. MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModel
+    5. MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModelType
+    6. MDD4All.QvtEditor.EaPlugin.UI.SetWhenConditionForRelationUserControl
+    7. MDD4All.QvtEditor.EaPlugin.UI.WhenWhereDialog
+-->
+<Include xmlns="http://wixtoolset.org/schemas/v4/wxs">
+
+  <Component Id="Cmp_ComRegistration" Guid="{6BB0E4D7-32A5-42DE-B684-0A429885B5E7}">
+
+    <!-- 1. MDD4All.QvtEditor.EaPlugin.QvtEditorAddin -->
+    <RegistryKey Root="HKCU" Key="Software\Classes\MDD4All.QvtEditor.EaPlugin.QvtEditorAddin">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.QvtEditorAddin" KeyPath="yes" />
+      <RegistryKey Key="CLSID">
+        <RegistryValue Type="string" Value="{9C708D7F-5AFF-3F08-BE31-1B867E0695CB}" />
+      </RegistryKey>
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{9C708D7F-5AFF-3F08-BE31-1B867E0695CB}">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.QvtEditorAddin" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{9C708D7F-5AFF-3F08-BE31-1B867E0695CB}\InprocServer32">
+      <RegistryValue Type="string" Value="mscoree.dll" />
+      <RegistryValue Name="ThreadingModel" Type="string" Value="Both" />
+      <RegistryValue Name="Class" Type="string" Value="MDD4All.QvtEditor.EaPlugin.QvtEditorAddin" />
+      <RegistryValue Name="Assembly" Type="string" Value="MDD4All.QvtEditor.EaPlugin, Version=$(var.ProductVersion), Culture=neutral, PublicKeyToken=dfd4bdb117292732" />
+      <RegistryValue Name="RuntimeVersion" Type="string" Value="v4.0.30319" />
+      <RegistryValue Name="CodeBase" Type="string" Value="file:///C:/ProgramData/MDD4All.de/QVTEditor/bin/MDD4All.QvtEditor.EaPlugin.dll" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{9C708D7F-5AFF-3F08-BE31-1B867E0695CB}\InprocServer32\$(var.ProductVersion)">
+      <RegistryValue Name="Class" Type="string" Value="MDD4All.QvtEditor.EaPlugin.QvtEditorAddin" />
+      <RegistryValue Name="Assembly" Type="string" Value="MDD4All.QvtEditor.EaPlugin, Version=$(var.ProductVersion), Culture=neutral, PublicKeyToken=dfd4bdb117292732" />
+      <RegistryValue Name="RuntimeVersion" Type="string" Value="v4.0.30319" />
+      <RegistryValue Name="CodeBase" Type="string" Value="file:///C:/ProgramData/MDD4All.de/QVTEditor/bin/MDD4All.QvtEditor.EaPlugin.dll" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{9C708D7F-5AFF-3F08-BE31-1B867E0695CB}\ProgId">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.QvtEditorAddin" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{9C708D7F-5AFF-3F08-BE31-1B867E0695CB}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}" />
+
+    <!-- 2. MDD4All.QvtEditor.EaPlugin.DataModels.ConnectorListModel -->
+    <RegistryKey Root="HKCU" Key="Software\Classes\MDD4All.QvtEditor.EaPlugin.DataModels.ConnectorListModel">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.ConnectorListModel" />
+      <RegistryKey Key="CLSID">
+        <RegistryValue Type="string" Value="{99F211E6-018E-354D-8250-547C517BED5A}" />
+      </RegistryKey>
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{99F211E6-018E-354D-8250-547C517BED5A}">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.ConnectorListModel" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{99F211E6-018E-354D-8250-547C517BED5A}\InprocServer32">
+      <RegistryValue Type="string" Value="mscoree.dll" />
+      <RegistryValue Name="ThreadingModel" Type="string" Value="Both" />
+      <RegistryValue Name="Class" Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.ConnectorListModel" />
+      <RegistryValue Name="Assembly" Type="string" Value="MDD4All.QvtEditor.EaPlugin, Version=$(var.ProductVersion), Culture=neutral, PublicKeyToken=dfd4bdb117292732" />
+      <RegistryValue Name="RuntimeVersion" Type="string" Value="v4.0.30319" />
+      <RegistryValue Name="CodeBase" Type="string" Value="file:///C:/ProgramData/MDD4All.de/QVTEditor/bin/MDD4All.QvtEditor.EaPlugin.dll" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{99F211E6-018E-354D-8250-547C517BED5A}\InprocServer32\$(var.ProductVersion)">
+      <RegistryValue Name="Class" Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.ConnectorListModel" />
+      <RegistryValue Name="Assembly" Type="string" Value="MDD4All.QvtEditor.EaPlugin, Version=$(var.ProductVersion), Culture=neutral, PublicKeyToken=dfd4bdb117292732" />
+      <RegistryValue Name="RuntimeVersion" Type="string" Value="v4.0.30319" />
+      <RegistryValue Name="CodeBase" Type="string" Value="file:///C:/ProgramData/MDD4All.de/QVTEditor/bin/MDD4All.QvtEditor.EaPlugin.dll" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{99F211E6-018E-354D-8250-547C517BED5A}\ProgId">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.ConnectorListModel" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{99F211E6-018E-354D-8250-547C517BED5A}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}" />
+
+    <!-- 3. MDD4All.QvtEditor.EaPlugin.DataModels.QvtTransformationTaggedValues -->
+    <RegistryKey Root="HKCU" Key="Software\Classes\MDD4All.QvtEditor.EaPlugin.DataModels.QvtTransformationTaggedValues">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.QvtTransformationTaggedValues" />
+      <RegistryKey Key="CLSID">
+        <RegistryValue Type="string" Value="{0FAEE1A6-7BBC-3CAC-BB8A-42EEC61AA8CD}" />
+      </RegistryKey>
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{0FAEE1A6-7BBC-3CAC-BB8A-42EEC61AA8CD}">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.QvtTransformationTaggedValues" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{0FAEE1A6-7BBC-3CAC-BB8A-42EEC61AA8CD}\InprocServer32">
+      <RegistryValue Type="string" Value="mscoree.dll" />
+      <RegistryValue Name="ThreadingModel" Type="string" Value="Both" />
+      <RegistryValue Name="Class" Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.QvtTransformationTaggedValues" />
+      <RegistryValue Name="Assembly" Type="string" Value="MDD4All.QvtEditor.EaPlugin, Version=$(var.ProductVersion), Culture=neutral, PublicKeyToken=dfd4bdb117292732" />
+      <RegistryValue Name="RuntimeVersion" Type="string" Value="v4.0.30319" />
+      <RegistryValue Name="CodeBase" Type="string" Value="file:///C:/ProgramData/MDD4All.de/QVTEditor/bin/MDD4All.QvtEditor.EaPlugin.dll" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{0FAEE1A6-7BBC-3CAC-BB8A-42EEC61AA8CD}\InprocServer32\$(var.ProductVersion)">
+      <RegistryValue Name="Class" Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.QvtTransformationTaggedValues" />
+      <RegistryValue Name="Assembly" Type="string" Value="MDD4All.QvtEditor.EaPlugin, Version=$(var.ProductVersion), Culture=neutral, PublicKeyToken=dfd4bdb117292732" />
+      <RegistryValue Name="RuntimeVersion" Type="string" Value="v4.0.30319" />
+      <RegistryValue Name="CodeBase" Type="string" Value="file:///C:/ProgramData/MDD4All.de/QVTEditor/bin/MDD4All.QvtEditor.EaPlugin.dll" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{0FAEE1A6-7BBC-3CAC-BB8A-42EEC61AA8CD}\ProgId">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.QvtTransformationTaggedValues" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{0FAEE1A6-7BBC-3CAC-BB8A-42EEC61AA8CD}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}" />
+
+    <!-- 4. MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModel -->
+    <RegistryKey Root="HKCU" Key="Software\Classes\MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModel">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModel" />
+      <RegistryKey Key="CLSID">
+        <RegistryValue Type="string" Value="{9CFE960E-7AE7-35DC-A054-39CFB226C23E}" />
+      </RegistryKey>
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{9CFE960E-7AE7-35DC-A054-39CFB226C23E}">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModel" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{9CFE960E-7AE7-35DC-A054-39CFB226C23E}\InprocServer32">
+      <RegistryValue Type="string" Value="mscoree.dll" />
+      <RegistryValue Name="ThreadingModel" Type="string" Value="Both" />
+      <RegistryValue Name="Class" Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModel" />
+      <RegistryValue Name="Assembly" Type="string" Value="MDD4All.QvtEditor.EaPlugin, Version=$(var.ProductVersion), Culture=neutral, PublicKeyToken=dfd4bdb117292732" />
+      <RegistryValue Name="RuntimeVersion" Type="string" Value="v4.0.30319" />
+      <RegistryValue Name="CodeBase" Type="string" Value="file:///C:/ProgramData/MDD4All.de/QVTEditor/bin/MDD4All.QvtEditor.EaPlugin.dll" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{9CFE960E-7AE7-35DC-A054-39CFB226C23E}\InprocServer32\$(var.ProductVersion)">
+      <RegistryValue Name="Class" Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModel" />
+      <RegistryValue Name="Assembly" Type="string" Value="MDD4All.QvtEditor.EaPlugin, Version=$(var.ProductVersion), Culture=neutral, PublicKeyToken=dfd4bdb117292732" />
+      <RegistryValue Name="RuntimeVersion" Type="string" Value="v4.0.30319" />
+      <RegistryValue Name="CodeBase" Type="string" Value="file:///C:/ProgramData/MDD4All.de/QVTEditor/bin/MDD4All.QvtEditor.EaPlugin.dll" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{9CFE960E-7AE7-35DC-A054-39CFB226C23E}\ProgId">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModel" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{9CFE960E-7AE7-35DC-A054-39CFB226C23E}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}" />
+
+    <!-- 5. MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModelType -->
+    <RegistryKey Root="HKCU" Key="Software\Classes\MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModelType">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModelType" />
+      <RegistryKey Key="CLSID">
+        <RegistryValue Type="string" Value="{66107E8D-251D-302F-89C2-5048718FDDC4}" />
+      </RegistryKey>
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{66107E8D-251D-302F-89C2-5048718FDDC4}">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModelType" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{66107E8D-251D-302F-89C2-5048718FDDC4}\InprocServer32">
+      <RegistryValue Type="string" Value="mscoree.dll" />
+      <RegistryValue Name="ThreadingModel" Type="string" Value="Both" />
+      <RegistryValue Name="Class" Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModelType" />
+      <RegistryValue Name="Assembly" Type="string" Value="MDD4All.QvtEditor.EaPlugin, Version=$(var.ProductVersion), Culture=neutral, PublicKeyToken=dfd4bdb117292732" />
+      <RegistryValue Name="RuntimeVersion" Type="string" Value="v4.0.30319" />
+      <RegistryValue Name="CodeBase" Type="string" Value="file:///C:/ProgramData/MDD4All.de/QVTEditor/bin/MDD4All.QvtEditor.EaPlugin.dll" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{66107E8D-251D-302F-89C2-5048718FDDC4}\InprocServer32\$(var.ProductVersion)">
+      <RegistryValue Name="Class" Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModelType" />
+      <RegistryValue Name="Assembly" Type="string" Value="MDD4All.QvtEditor.EaPlugin, Version=$(var.ProductVersion), Culture=neutral, PublicKeyToken=dfd4bdb117292732" />
+      <RegistryValue Name="RuntimeVersion" Type="string" Value="v4.0.30319" />
+      <RegistryValue Name="CodeBase" Type="string" Value="file:///C:/ProgramData/MDD4All.de/QVTEditor/bin/MDD4All.QvtEditor.EaPlugin.dll" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{66107E8D-251D-302F-89C2-5048718FDDC4}\ProgId">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.DataModels.RelationListModelType" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{66107E8D-251D-302F-89C2-5048718FDDC4}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}" />
+
+    <!-- 6. MDD4All.QvtEditor.EaPlugin.UI.SetWhenConditionForRelationUserControl -->
+    <RegistryKey Root="HKCU" Key="Software\Classes\MDD4All.QvtEditor.EaPlugin.UI.SetWhenConditionForRelationUserControl">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.UI.SetWhenConditionForRelationUserControl" />
+      <RegistryKey Key="CLSID">
+        <RegistryValue Type="string" Value="{8C88123E-F26F-3968-AD16-7F80BF2CF7B2}" />
+      </RegistryKey>
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{8C88123E-F26F-3968-AD16-7F80BF2CF7B2}">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.UI.SetWhenConditionForRelationUserControl" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{8C88123E-F26F-3968-AD16-7F80BF2CF7B2}\InprocServer32">
+      <RegistryValue Type="string" Value="mscoree.dll" />
+      <RegistryValue Name="ThreadingModel" Type="string" Value="Both" />
+      <RegistryValue Name="Class" Type="string" Value="MDD4All.QvtEditor.EaPlugin.UI.SetWhenConditionForRelationUserControl" />
+      <RegistryValue Name="Assembly" Type="string" Value="MDD4All.QvtEditor.EaPlugin, Version=$(var.ProductVersion), Culture=neutral, PublicKeyToken=dfd4bdb117292732" />
+      <RegistryValue Name="RuntimeVersion" Type="string" Value="v4.0.30319" />
+      <RegistryValue Name="CodeBase" Type="string" Value="file:///C:/ProgramData/MDD4All.de/QVTEditor/bin/MDD4All.QvtEditor.EaPlugin.dll" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{8C88123E-F26F-3968-AD16-7F80BF2CF7B2}\InprocServer32\$(var.ProductVersion)">
+      <RegistryValue Name="Class" Type="string" Value="MDD4All.QvtEditor.EaPlugin.UI.SetWhenConditionForRelationUserControl" />
+      <RegistryValue Name="Assembly" Type="string" Value="MDD4All.QvtEditor.EaPlugin, Version=$(var.ProductVersion), Culture=neutral, PublicKeyToken=dfd4bdb117292732" />
+      <RegistryValue Name="RuntimeVersion" Type="string" Value="v4.0.30319" />
+      <RegistryValue Name="CodeBase" Type="string" Value="file:///C:/ProgramData/MDD4All.de/QVTEditor/bin/MDD4All.QvtEditor.EaPlugin.dll" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{8C88123E-F26F-3968-AD16-7F80BF2CF7B2}\ProgId">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.UI.SetWhenConditionForRelationUserControl" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{8C88123E-F26F-3968-AD16-7F80BF2CF7B2}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}" />
+
+    <!-- 7. MDD4All.QvtEditor.EaPlugin.UI.WhenWhereDialog -->
+    <RegistryKey Root="HKCU" Key="Software\Classes\MDD4All.QvtEditor.EaPlugin.UI.WhenWhereDialog">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.UI.WhenWhereDialog" />
+      <RegistryKey Key="CLSID">
+        <RegistryValue Type="string" Value="{99D07706-1283-35F0-8149-73058318AA93}" />
+      </RegistryKey>
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{99D07706-1283-35F0-8149-73058318AA93}">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.UI.WhenWhereDialog" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{99D07706-1283-35F0-8149-73058318AA93}\InprocServer32">
+      <RegistryValue Type="string" Value="mscoree.dll" />
+      <RegistryValue Name="ThreadingModel" Type="string" Value="Both" />
+      <RegistryValue Name="Class" Type="string" Value="MDD4All.QvtEditor.EaPlugin.UI.WhenWhereDialog" />
+      <RegistryValue Name="Assembly" Type="string" Value="MDD4All.QvtEditor.EaPlugin, Version=$(var.ProductVersion), Culture=neutral, PublicKeyToken=dfd4bdb117292732" />
+      <RegistryValue Name="RuntimeVersion" Type="string" Value="v4.0.30319" />
+      <RegistryValue Name="CodeBase" Type="string" Value="file:///C:/ProgramData/MDD4All.de/QVTEditor/bin/MDD4All.QvtEditor.EaPlugin.dll" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{99D07706-1283-35F0-8149-73058318AA93}\InprocServer32\$(var.ProductVersion)">
+      <RegistryValue Name="Class" Type="string" Value="MDD4All.QvtEditor.EaPlugin.UI.WhenWhereDialog" />
+      <RegistryValue Name="Assembly" Type="string" Value="MDD4All.QvtEditor.EaPlugin, Version=$(var.ProductVersion), Culture=neutral, PublicKeyToken=dfd4bdb117292732" />
+      <RegistryValue Name="RuntimeVersion" Type="string" Value="v4.0.30319" />
+      <RegistryValue Name="CodeBase" Type="string" Value="file:///C:/ProgramData/MDD4All.de/QVTEditor/bin/MDD4All.QvtEditor.EaPlugin.dll" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{99D07706-1283-35F0-8149-73058318AA93}\ProgId">
+      <RegistryValue Type="string" Value="MDD4All.QvtEditor.EaPlugin.UI.WhenWhereDialog" />
+    </RegistryKey>
+
+    <RegistryKey Root="HKCU" Key="Software\Classes\WOW6432Node\CLSID\{99D07706-1283-35F0-8149-73058318AA93}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}" />
+
+  </Component>
+
+</Include>

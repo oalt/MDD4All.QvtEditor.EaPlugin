@@ -1,0 +1,21 @@
+<Project Sdk="WixToolset.Sdk/6.0.0">
+
+    <PropertyGroup>
+        <!-- Overridable at build time: dotnet build -p:ProductVersion=1.2.3.4 -->
+        <ProductVersion Condition="'$(ProductVersion)' == ''">1.0.0.0</ProductVersion>
+
+        <!--
+          ICE24 checks product/version consistency and commonly false-positives
+          with Scope="perUser" packages or non-standard version schemes.
+        -->
+        <SuppressIces>ICE24</SuppressIces>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <!-- Makes $(var.ProductVersion) available inside .wxs/.wxi files -->
+        <DefineConstants>
+            ProductVersion=$(ProductVersion)
+        </DefineConstants>
+    </PropertyGroup>
+
+</Project>
